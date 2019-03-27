@@ -53,13 +53,27 @@ public class VentanaPrincipal {
 				// El codigo que se ejecuta cuando pulsas un boton es este de aqui
 				JOptionPane.showMessageDialog(ventana, "HAS PULSADO EL BOTON", "HOOOLAAAA", JOptionPane.INFORMATION_MESSAGE);
 			}
-		});
+		});m
 		//Esto inicializa el Listener de la Lista
 		lista.addListSelectionListener(new ListSelectionListener() {//Componente a la escucha
 			
 			@Override
 			public void valueChanged(ListSelectionEvent e) {// Este evento detecta cuando la lista sea seleccionada
 				String msj = lista.getSelectedValue();// Esto te devuelve El valor Seleccionado
+				JOptionPane.showMessageDialog(ventana, msj, "HOOOLAAAA", JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
+			//Esto pone a  la  escucha pulsacion del Raton 
+		lista.addMouseListener(new MouseAdapter() {//Uso adaptador para no tener que emplementar todos los metodos
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				/* Compruebo el si el evento de Raton es del izquierdo
+				 Esto es un operador ternario funciona asi
+				 			variable = (condicion ? valorVariableTrue : valorVariableFalse)
+				
+				TODO: Para Probar Funcionamiento Comenta El Codigo Que inicializa el listener de la Lista
+				 */
+				String msj = (SwingUtilities.isLeftMouseButton(e) ? "Has Pulsado El Izquierdo":"Has pulsado El Derecho");
 				JOptionPane.showMessageDialog(ventana, msj, "HOOOLAAAA", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
