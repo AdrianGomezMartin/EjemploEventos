@@ -21,7 +21,7 @@ public class VentanaPrincipal {
 	 */
 	public VentanaPrincipal() {
 		ventana = new JFrame();// Crea La ventana
-		ventana.setBounds(0, 0, 500, 400);// Le da Tamaño
+		ventana.setBounds(0, 0, 500, 400);// Le da TamaÃ±o
 		ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);// Y le digo que se cierre cuando pulse la cruz
 	}
 	/**
@@ -37,7 +37,7 @@ public class VentanaPrincipal {
 		ventana.setLayout(new GridLayout(1,3));// Esto es asignar un Layout NO PREOCUPARSE AUN
 		boton = new JButton("PULSAME"); // Inicializo el boton con el TEXTO PULSAME
 		lista = new JList<>(listData);// Inicializo la lista cargando el array
-		ventana.add(lista);// Añado ambos  a la ventana
+		ventana.add(lista);// AÃ±ado ambos  a la ventana
 		ventana.add(boton);
 	}
 	/**
@@ -54,7 +54,7 @@ public class VentanaPrincipal {
 				JOptionPane.showMessageDialog(ventana, "HAS PULSADO EL BOTON", "HOOOLAAAA", JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
-		//Esto inicializa el Listener del boton
+		//Esto inicializa el Listener de la Lista
 		lista.addListSelectionListener(new ListSelectionListener() {//Componente a la escucha
 			
 			@Override
