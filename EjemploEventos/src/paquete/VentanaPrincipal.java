@@ -53,7 +53,7 @@ public class VentanaPrincipal {
 				// El codigo que se ejecuta cuando pulsas un boton es este de aqui
 				JOptionPane.showMessageDialog(ventana, "HAS PULSADO EL BOTON", "HOOOLAAAA", JOptionPane.INFORMATION_MESSAGE);
 			}
-		});m
+		});
 		//Esto inicializa el Listener de la Lista
 		lista.addListSelectionListener(new ListSelectionListener() {//Componente a la escucha
 			
